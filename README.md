@@ -98,6 +98,6 @@ The target model performance was an accuracy score of 75%. Below is a summary of
 
 ## Summary 
 
-The target performance of the model was not achieved in any of the attempts made to optimize the model. Another action that could have been taken would have been to try another hidden layer. However, literature review suggest that two hidden layers with more nodes usually work better and less demanding processing wise than three layers.
+The target performance of the model was not achieved in any of the attempts made to optimize the model. In general, the accuracy score achieved was 73%. Another action that could have been taken would have been to try another hidden layer. However, literature review suggest that two hidden layers with more nodes usually work better and less demanding processing wise than three layers.
 
 Structurally, random forest models are very similar to their neural network counterparts, and this model could have been used in place of the deep neural network. It is likely that this model may perform better than the neural network because they are a type of ensemble learning model that combines multiple smaller models into a more robust and accurate model. Random forest models use a number of weak learner algorithms (decision trees) and combine their output to make a final classification (or regression) decision. Additionally, they can easily handle outliers and nonlinear data.
