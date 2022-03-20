@@ -25,9 +25,11 @@ The dataset is a CSV file containing more than 34,000 organizations that have re
 
 1. How many neurons, layers, and activation functions did you select for your neural network model, and why?
 * Initially, the number of input features and hidden nodes used was:
-    number_input_features = 43 (number of trained scaled features) 
-    hidden_nodes_layer1 = 20
-    hidden_nodes_layer2 = 10
+
+   - number_input_features = 43 (number of trained scaled features) 
+   - hidden_nodes_layer1 = 20
+   - hidden_nodes_layer2 = 10
+
 There is no specifics/agreement among data scientist as to how much nodes should be placed in a hidden layer. However, a quick review of the literature suggest that a good starting point would be to use half of input feature for the first layer, and half of the first layer in the second layer. 
 
 2. Were you able to achieve the target model performance? What steps did you take to try and increase model performance?
@@ -35,44 +37,64 @@ There is no specifics/agreement among data scientist as to how much nodes should
 The target model performance was an accuracy score of 75%. Below is a summary of the accuracy scores from the inital model and the steps taken to optimize the model.
 
 * Initial model configuration:
-    number_input_features = 43
-    hidden_nodes_layer1 = 20
-    hidden_nodes_layer2 = 10
-    First hidden layer activation function: relu
-    Second hidden layer activation function: relu
-    Output layer activation function: sigmoid
+    - number_input_features = 43
+    - hidden_nodes_layer1 = 20
+    - hidden_nodes_layer2 = 10
+    - First hidden layer activation function: relu
+    - Second hidden layer activation function: relu
+    - Output layer activation function: sigmoid
 
     The model performancece is displayed in figure 1 below. As can be observed the accuracy score achieved was 72.9%.
+    
+    Figure 1.
+    
+    <img width="427" alt="figure 1" src="https://user-images.githubusercontent.com/92636438/159158095-0b0f250b-83db-4d2f-bc74-b621255a6268.png">
+
 
 * First optimization attempt - ASK_AMT was removed as a feature. Model configuration:
-    number_input_features = 42
-    hidden_nodes_layer1 = 20
-    hidden_nodes_layer2 = 10
-    First hidden layer activation function: relu
-    Second hidden layer activation function: relu
-    Output layer activation function: sigmoid
+    - number_input_features = 42
+    - hidden_nodes_layer1 = 20
+    - hidden_nodes_layer2 = 10
+    - First hidden layer activation function: relu
+    - Second hidden layer activation function: relu
+    - Output layer activation function: sigmoid
 
     The model performancece is displayed in figure 2 below. As can be observed the accuracy score achieved was also 72.9%.
+    
+    Figure 2.
+    
+    <img width="426" alt="2" src="https://user-images.githubusercontent.com/92636438/159158129-945ed940-9d5d-4e6a-8034-753594bddbe5.png">
 
-* Second optimization attempt - (ASK_AMT was removed as a feature). Model configuration:
-    number_input_features = 42
-    hidden_nodes_layer1 = 20
-    hidden_nodes_layer2 = 10
-    First hidden layer activation function: relu
-    Second hidden layer activation function: sigmoid
-    Output layer activation function: sigmoid
 
-    The model performancece is displayed in figure 3 below. As can be observed the accuracy score achieved was also 72.9%.
+* Second optimization attempt - ASK_AMT was removed as a feature & activation function changed. Model configuration:
+    - number_input_features = 42
+    - hidden_nodes_layer1 = 20
+    - hidden_nodes_layer2 = 10
+    - First hidden layer activation function: relu
+    - Second hidden layer activation function: sigmoid
+    - Output layer activation function: sigmoid
 
-* Third optimization attempt - (ASK_AMT was removed as a feature). Model configuration:
-    number_input_features = 42
-    hidden_nodes_layer1 = 80
-    hidden_nodes_layer2 = 40
-    First hidden layer activation function: relu
-    Second hidden layer activation function: sigmoid
-    Output layer activation function: sigmoid
+    The model performancece is displayed in figure 3 below. As can be observed the accuracy score achieved was 73.1%.
+    
+    Figure 3.
+    
+    <img width="426" alt="3" src="https://user-images.githubusercontent.com/92636438/159158159-b610bc07-ad15-4acd-811d-6603c67efa89.png">
 
-    The model performancece is displayed in figure 4 below. As can be observed the accuracy score achieved was also 72.9%.
+
+* Third optimization attempt - ASK_AMT was removed as a feature, activation function changed and number of nodes changed. Model configuration:
+    - number_input_features = 42
+    - hidden_nodes_layer1 = 80
+    - hidden_nodes_layer2 = 40
+    - First hidden layer activation function: relu
+    - Second hidden layer activation function: sigmoid
+    - Output layer activation function: sigmoid
+
+    The model performancece is displayed in figure 4 below. As can be observed the accuracy score achieved was 72.5%.
+    
+    Figure 4.
+    
+    <img width="442" alt="4" src="https://user-images.githubusercontent.com/92636438/159158179-610b781d-087c-4020-ab6e-7bddf50e513a.png">
+
 
 ## Summary 
 
